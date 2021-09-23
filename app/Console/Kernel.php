@@ -31,8 +31,8 @@ class Kernel extends ConsoleKernel
         //     Log::info('Task Schedule berhasil dijalankan');
         // })->everyTwoMinutes();
 
-        // $schedule->command('emails:send')->everyMinute();
-        $schedule->job(new SendEmailJob)->everyMinute();
+        $schedule->command('emails:send')->everyTwoMinutes();
+        // $schedule->job(new SendEmailJob)->everyMinute();
         Log::info('Task Schedule berhasil dijalankan');
     }
 
